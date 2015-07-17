@@ -1,0 +1,9 @@
+## Interface: 60200
+## Title: DKP Tool
+## Version: v60200-0.0.1 
+## Author: Almightree
+## Notes: A tool to test writing add-ons.
+## Dependencies: SimpleTimingLib
+## SavedVariables: SimpleDKP_Channel, SimpleDKP_AuctionTime, SimpleDKP_MinBid, SimpleDKP_ACL
+
+DKPTool.lua
