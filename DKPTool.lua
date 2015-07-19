@@ -92,7 +92,7 @@ do
 				SendChatMessage(lowBid:format(SimpleDKP_MinBid), "WHISPER", nil, sender)
 				return
 			end
-		for i, v ipairs(bids) do -- check if that player has already bid
+		for i, v in ipairs(bids) do -- check if that player has already bid
 			if sender == v.name then
 				SendChatMessage(oldBidDetected:format(v.bid, bid), "WHISPER", nil, sender)
 				v.bid = bid
@@ -156,7 +156,7 @@ end
 		cmd = cmd:lower() -- the commmand should not be case sensitive
 		if cmd == "start" and arg then -- /sdkp start item
 			startAuction(msg:match("^start%s+(.+)")) -- extract the item link
-		elseif cmd == "stop" then -- /sdkp stop
+		elseif cmd == "cancel" then -- /sdkp stop
 			cancelAuction()
 		elseif cmd == "channel" then -- /sdkp channel arg
 			if arg then -- a new channel was provided
